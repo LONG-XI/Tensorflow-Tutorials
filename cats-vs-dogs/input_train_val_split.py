@@ -8,8 +8,8 @@ import math
 
 #%%
 
-# you need to change this to your data directory
-train_dir = 'C:\\xilong\\cat-dog\\01 cats vs dogs\\data\\train\\'
+# you need to change this to your data directory. and if you are mac or linux users, change \\ with /
+train_dir = 'C:\\xilong\\cats-vs-dog\\data\\train\\'
 
 def get_files(file_dir, ratio):
     '''
