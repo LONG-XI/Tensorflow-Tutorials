@@ -22,9 +22,9 @@ learning_rate = 0.0001 # with current parameters, it is suggested to use learnin
 def run_training():
     
     # you need to change the directories to yours.
-    train_dir = 'C:\\xilong\\cat-dog\\01 cats vs dogs\\data\\train\\'
-    logs_train_dir = 'C:\\xilong\\cat-dog\\01 cats vs dogs\\new_version\logs\\train\\'
-    logs_val_dir = 'C:\\xilong\\cat-dog\\01 cats vs dogs\\new_version\\logs\\val\\'
+    train_dir = 'C:\\xilong\\cats-vs-dogs\\data\\train\\'
+    logs_train_dir = 'C:\\xilong\\cats-vs-dogs\\logs\\train\\'
+    logs_val_dir = 'C:\\xilong\\cats-vs-dogs\\logs\\val\\'
     
     # invoke get_files function from input_train_val_split.py file
     train, train_label, val, val_label = input_train_val_split.get_files(train_dir, RATIO)
