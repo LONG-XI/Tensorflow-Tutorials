@@ -1,14 +1,3 @@
-# I used windows with Python 3.7, TensorFlow 1.14*, other OS should also be good, but you have to change the format of dir if you use linux or mac
-
-# How to run?
-# run the training.py once
-
-# Note: 
-# it is suggested to restart your kenel to train the model multiple times 
-#(in order to clear all the variables in the memory)
-# Otherwise errors may occur: conv1/weights/biases already exist......
-
-
 #%%
 
 import tensorflow as tf
