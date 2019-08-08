@@ -123,7 +123,7 @@ def run_training():
 #    '''
 #    
 #    # you need to change the directories to yours.
-#    train_dir = '/home/kevin/tensorflow/cats_vs_dogs/data/train/'
+#    train_dir = 'C:\\xilong\\cats-vs-dogs\\data\\train\\'
 #    train, train_label = input_data.get_files(train_dir)
 #    image_array = get_one_image(train)
 #    
@@ -142,7 +142,7 @@ def run_training():
 #        x = tf.placeholder(tf.float32, shape=[208, 208, 3])
 #        
 #        # you need to change the directories to yours.
-#        logs_train_dir = '/home/kevin/tensorflow/cats_vs_dogs/logs/train/' 
+#        logs_train_dir = '........../cats_vs_dogs/logs/train/' 
 #                       
 #        saver = tf.train.Saver()
 #        
