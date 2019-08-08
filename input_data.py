@@ -1,29 +1,7 @@
-#By @Kevin Xu
-#kevin28520@gmail.com
-
-# 11.08 2017 更新
-# 最近入驻了网易云课堂讲师，我的第一门课《使用亚马逊云计算训练深度学习模型》。
-# 有兴趣的同学可以学习交流。
-# * 我的网易云课堂主页： http://study.163.com/provider/400000000275062/index.htm
-
-# 深度学习QQ群, 1群满): 153032765
-# 2群：462661267
-#The aim of this project is to use TensorFlow to process our own data.
-#    - input_data.py:  read in data and generate batches
-#    - model: build the model architecture
-#    - training: train
-
-# I used Ubuntu with Python 3.5, TensorFlow 1.0*, other OS should also be good.
-# With current settings, 10000 traing steps needed 50 minutes on my laptop.
-
-
-# data: cats vs. dogs from Kaggle
-# Download link: https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data
-# data size: ~540M
+# I used windows with Python 3.7, TensorFlow 1.14*, other OS should also be good, but you have to change the format of dir if you use linux or mac
 
 # How to run?
-# 1. run the training.py once
-# 2. call the run_training() in the console to train the model.
+# run the training.py once
 
 # Note: 
 # it is suggested to restart your kenel to train the model multiple times 
@@ -147,8 +125,6 @@ def get_batch(image, label, image_W, image_H, batch_size, capacity):
     image = tf.image.resize_image_with_crop_or_pad(image, image_W, image_H)
     
     # if you want to test the generated batches of images, you might want to comment the following line.
-    # 如果想看到正常的图片，请注释掉111行（标准化）和 126行（image_batch = tf.cast(image_batch, tf.float32)）
-    # 训练时不要注释掉！
     image = tf.image.per_image_standardization(image)
     
     image_batch, label_batch = tf.train.batch([image, label],
