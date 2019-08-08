@@ -144,52 +144,6 @@ def get_batch(image, label, image_W, image_H, batch_size, capacity):
     
     return image_batch, label_batch
 
-
- 
-#%% TEST
-# To test the generated batches of images
-# When training the model, DO comment the following codes
-
-
-
-#
-#import matplotlib.pyplot as plt
-#
-#BATCH_SIZE = 2
-#CAPACITY = 256
-#IMG_W = 208
-#IMG_H = 208
-#
-#train_dir = '/Users/xilong/Desktop/01 cats vs dogs/data/test/'
-#
-#image_list, label_list = get_files(train_dir)
-#image_batch, label_batch = get_batch(image_list, label_list, IMG_W, IMG_H, BATCH_SIZE, CAPACITY)
-#
-#with tf.Session() as sess:
-#    i = 0
-#    coord = tf.train.Coordinator()
-#    threads = tf.train.start_queue_runners(coord=coord)
-#    
-#    try:
-#        while not coord.should_stop() and i<1:
-#            
-#            img, label = sess.run([image_batch, label_batch])
-#            
-#            # just test one batch
-#            for j in np.arange(BATCH_SIZE):
-#                print('label: %d' %label[j])
-#                plt.imshow(img[j,:,:,:])
-#                plt.show()
-#            i+=1
-#            
-#    except tf.errors.OutOfRangeError:
-#        print('done!')
-#    finally:
-#        coord.request_stop()
-#    coord.join(threads)
-
-
-#%%
 N_CLASSES = 2
 IMG_W = 208  # resize the image, if the input image is too large, training will be very slow.
 IMG_H = 208
@@ -200,9 +154,6 @@ learning_rate = 0.0001 # with current parameters, it is suggested to use
 images, labels = get_files(train_dir)
 image = tf.cast(images, tf.string)  # Data type conversion, converting list type into tensor that tensorflow can understand
 label = tf.cast(labels, tf.int32)   # Data type conversion
-
-
-epoch_num=8
  
 input_queue = tf.train.slice_input_producer([image, label],num_epochs=None,shuffle=False)
 
@@ -224,16 +175,8 @@ with tf.Session() as sess:
     # show that picture decoded into tensor type
     plt.imshow(image.eval())
     plt.show()
-# 
-#with tf.Session() as sess:
-#    sess.run(tf.global_variables_initializer())
-#    coord = tf.train.Coordinator()
-#    threads = tf.train.start_queue_runners(sess=sess, coord=coord)
-#    for i in range(MAX_STEP):
-#        k = sess.run(input_queue)
-#        #print ('************************')
-#        #print (i,k)
-#    
+
+    
 #label = input_queue[1]
 #print(label)
 #
