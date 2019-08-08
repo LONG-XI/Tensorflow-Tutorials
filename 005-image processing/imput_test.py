@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 #%%
 
 # you need to change this to your data directory
-train_dir = 'C:\\xilong\\cat-dog\\01 cats vs dogs\\data_test\\train\\'
+train_dir = 'C:\\xilong\\005-image processing\\data\\train\\'
 
 def get_files(file_dir):
     '''
