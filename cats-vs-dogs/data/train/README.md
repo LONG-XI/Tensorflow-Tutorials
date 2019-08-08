@@ -1,4 +1,4 @@
-note: when training remove this file first.
+note: when training remove this file 'README.md' first.
 
 This file contains training datasets, i uploaded a few of data, you need to download the data form this link below.
 
