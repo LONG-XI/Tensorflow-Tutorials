@@ -1,4 +1,4 @@
-Data preparation for CNN classification,
+# Data preparation for CNN classification
 
 prepare the training batch data for the CNN model
 
