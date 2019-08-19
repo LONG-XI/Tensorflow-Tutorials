@@ -1,4 +1,4 @@
-note: when training remove this file 'README.md' first.
+note: Delete this file 'README.md' first when training.
 
 This fold contains training datasets, i only uploaded a few of data, you need to download the whole data from this link below.
 
