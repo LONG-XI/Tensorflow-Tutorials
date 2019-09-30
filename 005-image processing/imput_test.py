@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 #%%
 
 # you need to change this to your data directory
+# i'm runing on windows, you'd change the directory depending on your os.
 train_dir = 'C:\\xilong\\005-image processing\\data\\train\\'
 
 def get_files(file_dir):
@@ -32,6 +33,7 @@ def get_files(file_dir):
     label_planes = []
     
     # we define cats are belong to the category of 0, dogs 1 and plane 2.
+    # we have 3 classes, cat, dog and plane. adding codes if name[0]=='class_name' below if you want to have more classes, 
     for file in os.listdir(file_dir):
         name = file.split(sep='.')
         if name[0]=='cat':
